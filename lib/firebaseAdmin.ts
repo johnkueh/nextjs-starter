@@ -7,7 +7,8 @@ if (!firebaseAdmin.apps.length) {
       privateKey: serviceAccount.private_key,
       clientEmail: serviceAccount.client_email,
       projectId: serviceAccount.project_id,
-    })
+    }),
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
   });
 }
 

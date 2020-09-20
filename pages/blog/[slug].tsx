@@ -1,6 +1,7 @@
 import { GetStaticPropsContext, InferGetServerSidePropsType } from "next";
 import Link from "next/link";
 import React from "react";
+import ContentfulRichText from "../../components/ContentfulRichText";
 import { getBlogPost, getBlogPosts } from "../../lib/services/blogPost";
 
 const BlogPost = ({
@@ -12,6 +13,9 @@ const BlogPost = ({
         <a>Go back to blog</a>
       </Link>
       <h1>{blogPost.fields.title}</h1>
+      <div>
+        <ContentfulRichText document={blogPost.fields.content} />
+      </div>
     </>
   );
 };

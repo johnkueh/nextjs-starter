@@ -24,8 +24,6 @@ const Clients = (props: InferGetServerSidePropsType<typeof getStaticProps>) => {
   );
 };
 
-export default Clients;
-
 export async function getStaticProps(context) {
   const clients = await getClients();
 
@@ -35,3 +33,5 @@ export async function getStaticProps(context) {
     },
   };
 }
+
+export default Clients;
